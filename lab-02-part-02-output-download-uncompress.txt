@@ -117,6 +117,8 @@ Write the command you used below.  Also copy and paste the output below.
 
 Write the command you used to determine your directory.  Also, copy and paste the output below.
 ----------
+pwd
+/Users/Hfares168
 
 
 
@@ -125,7 +127,7 @@ Write the command you used to determine your directory.  Also, copy and paste th
 
 Write the command that you used to change to your home directory.  If you were already in your home directory, write the command that you *would* have used to change to it!
 ----------
-
+~
 
 
 ==========
@@ -141,6 +143,16 @@ Use ls to verify that it downloaded.
 
 Write down the command that you used to download the file below.  Additionally, write the output of the command below.
 ----------
+curl -o mtec1002-lab-02.zip  http://foureyes.github.io/mtec1002-spring2014/labs/02/mtec1002-lab-02.zip
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   178  100   178    0     0   1308      0 --:--:-- --:--:-- --:--:--  1318
+Alis-MacBook-Air:~ Hfares168$ ls
+Applications		Library			animals
+Desktop			Movies			foo
+Documents		Music			food
+Downloads		Pictures		mtec1002-lab-02.zip
+GameAnalytics		Public
 
 
 
@@ -150,7 +162,7 @@ Write down the command that you used to download the file below.  Additionally, 
 Write down the command that you used to uncompress the file.
 ----------
 
-
+unzip mtec1002-lab-02.zip 
 
 ==========
 15. Change to the directory that was just created.  List the contents (of the directory that was extracted from the labs .zip file). 
@@ -168,6 +180,16 @@ We're going to mess around with archiving and compressing files.  We'll make a d
 
 Copy and paste the output below.
 ----------
+~
+-bash: /Users/Hfares168: is a directory
+Alis-MacBook-Air:~ Hfares168$ mkdir stuff
+Alis-MacBook-Air:~ Hfares168$ ls
+Applications		Library			animals
+Desktop			Movies			foo
+Documents		Music			food
+Downloads		Pictures		mtec1002-lab-02.zip
+GameAnalytics		Public			stuff
+Alis-MacBook-Air:~ Hfares168$ 
 
 
 
@@ -180,7 +202,7 @@ List the files in the directory you're currently in (which should be stuff).
 
 Copy and paste the output below.
 ----------
-
+hello.txt
 
 
 ==========
@@ -193,6 +215,17 @@ List the files in the directory you're currently in (which should be home).
 Copy and paste the output below.
 ----------
 
+cd
+Alis-MacBook-Air:~ Hfares168$ tar -cvf stuff.tar stuff
+a stuff
+a stuff/hello.txt
+Alis-MacBook-Air:~ Hfares168$ ls
+Applications		Movies			food
+Desktop			Music			mtec1002-lab-02.zip
+Documents		Pictures		stuff
+Downloads		Public			stuff.tar
+GameAnalytics		animals
+Library			foo
 
 
 ==========
@@ -202,7 +235,8 @@ $ tar -cvf stuff.tar stuff
 
 Copy and paste the output below.
 ----------
-
+ No such file or directory
+tar: Error exit delayed from previous errors.
 
 
 ==========
@@ -210,7 +244,7 @@ Copy and paste the output below.
 
 Copy and paste the output below. (It should contain stuff.tar)
 ----------
-
+	stuff.tar
 
 
 ==========
@@ -220,7 +254,7 @@ gzip stuff.tar
 
 List your files again.... you should have a new file with a .gz extension.  Copy and paste the output of your this below.
 ----------
-
+stuff.tar.gz
 
 
 ==========
